@@ -102,6 +102,7 @@ footer {
 
 /* Stylisation des sections */
 .main {
+    position: relative; /* Positionne les éléments enfants de manière relative */
     width: 100%; /* La section occupe toute la largeur de la fenêtre */
     min-height: 100vh; /* La section prend au minimum toute la hauteur de la fenêtre */
     display: flex; /* Utilisation de Flexbox pour centrer le contenu */
@@ -112,8 +113,29 @@ footer {
     color: black; /* Définit la couleur du texte en blanc */
     padding: 20px; /* Ajoute un espace intérieur pour éviter que le contenu ne touche les bords */
     box-sizing: border-box; /* Assure que le padding est inclus dans les dimensions de l'élément */
+    overflow: hidden; /* Cache le contenu qui dépasse de la section */
 }
-#main2 { background: #e9ecef; }
+#main1 { 
+    background: linear-gradient(to bottom, transparent, #e9ecef); /* Dégradé de couleur pour la section */
+}
+
+/* Stylisation de la section 2 */
+#main2 { 
+    background: #e9ecef; /* Couleur de fond de la section */
+    display: flex; /* Utilisation de Flexbox pour aligner le contenu */
+    flex-direction: column; /* Organise les éléments en colonne */
+}
+
+/* Stylisation de la deuxième partie de main2 */
+.section2 {
+    display: flex; /* Utilisation de Flexbox pour aligner le contenu */
+    flex-direction: row; /* Organise les éléments en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 20px; /* Espace entre les éléments */
+    margin-top: 50px; /* Marge en haut de la section */
+}
+
 #main3 { 
     background: #e9ecef; 
     height: 100vh; /* La section prend toute la hauteur de la fenêtre */
@@ -165,16 +187,17 @@ justify-content: center;
 /* Conteneur des boutons */
 .organiserbtn {
     display: flex; /* Utilise Flexbox pour aligner les boutons */
-    flex-direction: row; /* Organise les boutons en colonne */
+    flex-direction: row; /* Organise les boutons en ligne */
     gap: 20px; /* Espace entre les boutons */
-    position: absolute; /* Positionne les boutons de manière absolue */
-    left: 50px; /* Positionne les boutons à 50px du bord gauche */
+    justify-content: center; /* Centre les éléments horizontalement */
     bottom: 100px; /* Positionne les boutons à 100px du bas de la fenêtre */
+    position: absolute; /* Positionne les boutons de manière absolue */
+   
 }
 /* Conteneur des boutons */
 .organiserbtn2 {
     display: flex; /* Utilise Flexbox pour aligner les boutons */
-    flex-direction: row; /* Organise les boutons en colonne */
+    flex-direction: row; /* Organise les boutons en ligne*/
     gap: 20px; /* Espace entre les boutons */
     position: relative; /* Positionne les boutons de manière absolue */
     bottom: 100px; /* Positionne les boutons à 100px du bas de la fenêtre */
@@ -184,23 +207,106 @@ justify-content: center;
 }
 
 /* Stylisation du bouton */
-.btncv {
-    background-color: transparent; /* Couleur de fond du bouton */
-    color: white; /* Couleur du texte du bouton */
-    padding: 10px 20px; /* Espacement interne du bouton */
-    border: 2px solid white; /* Bordure blanche de 2px */
+
+/* Stylisation générale des boutons */
+button {
+    position: relative; /* Positionnement relatif pour permettre le positionnement absolu des enfants */
+    display: inline-block; /* Affichage en ligne */
     cursor: pointer; /* Change le curseur en forme de main */
-    transition: all 0.3s ease; /* Transition douce pour les changements de style */
-    text-decoration: none; /* Supprime le soulignement du texte */
+    outline: none; /* Supprime le contour par défaut */
+    border: 0; /* Supprime la bordure par défaut */
+    vertical-align: middle; /* Aligne verticalement au milieu */
+    text-decoration: none; /* Supprime la décoration de texte */
+    background: transparent; /* Fond transparent */
+    padding: 0; /* Supprime le padding */
+    font-size: inherit; /* Hérite de la taille de police */
+    font-family: inherit; /* Hérite de la famille de police */
+}
+
+/* Stylisation spécifique pour le bouton "learn-more" */
+button.learn-more {
+    width: 12rem; /* Largeur du bouton */
+    height: auto; /* Hauteur automatique */
+}
+
+/* Stylisation du cercle à l'intérieur du bouton */
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); /* Transition douce */
+    position: relative; /* Positionnement relatif */
+    display: block; /* Affichage en bloc */
+    margin: 0; /* Pas de marge */
+    width: 3rem; /* Largeur du cercle */
+    height: 3rem; /* Hauteur du cercle */
+    background: #282936; /* Couleur de fond du cercle */
+   
+}
+
+/* Stylisation de l'icône à l'intérieur du cercle */
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); /* Transition douce */
+    position: absolute; /* Positionnement absolu */
+    top: 0; /* Aligne en haut */
+    bottom: 0; /* Aligne en bas */
+    margin: auto; /* Centre verticalement */
+    background: #fff; /* Couleur de fond de l'icône */
+}
+
+/* Stylisation de la flèche à l'intérieur de l'icône */
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); /* Transition douce */
+    left: 0.625rem; /* Position à gauche */
+    width: 1.125rem; /* Largeur de la flèche */
+    height: 0.125rem; /* Hauteur de la flèche */
+    background: none; /* Pas de fond */
+}
+
+/* Stylisation de la flèche avant */
+button.learn-more .circle .icon.arrow::before {
+    position: absolute; /* Positionnement absolu */
+    content: ""; /* Contenu vide */
+    top: -0.29rem; /* Position en haut */
+    right: 0.0625rem; /* Position à droite */
+    width: 0.625rem; /* Largeur de la flèche */
+    height: 0.625rem; /* Hauteur de la flèche */
+    border-top: 0.125rem solid #fff; /* Bordure en haut */
+    border-right: 0.125rem solid #fff; /* Bordure à droite */
+    transform: rotate(45deg); /* Rotation de 45 degrés */
+}
+
+/* Stylisation du texte du bouton */
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); /* Transition douce */
+    position: absolute; /* Positionnement absolu */
+    top: 0; /* Aligne en haut */
+    left: 0; /* Aligne à gauche */
+    right: 0; /* Aligne à droite */
+    bottom: 0; /* Aligne en bas */
+    padding: 0.75rem 0; /* Padding vertical */
+    margin: 0 0 0 1.85rem; /* Marge à gauche */
+    color: #282936; /* Couleur du texte */
+    font-weight: 700; /* Poids de la police */
+    line-height: 1.6; /* Hauteur de ligne */
+    text-align: center; /* Centre le texte */
+    text-decoration: none; /* Supprime le soulignement */
 }
 
 /* Effet au survol du bouton */
-.btncv:hover {
-    background-color: white; /* Change la couleur de fond du bouton au survol */
-    color: black; /* Change la couleur du texte du bouton au survol */
-    transform: scale(1.05); /* Agrandit légèrement le bouton au survol */
+button:hover .circle {
+    width: 100%; /* Le cercle prend toute la largeur */
 }
-/* Stylisation du bouton */
+
+/* Effet au survol de l'icône flèche */
+button:hover .circle .icon.arrow {
+    background: #fff; /* Change la couleur de fond de l'icône */
+    transform: translate(1rem, 0); /* Déplace l'icône vers la droite */
+}
+
+/* Effet au survol du texte du bouton */
+button:hover .button-text {
+    color: #fff; /* Change la couleur du texte */
+}
+
+/* Stylisation du bouton 2 */
 .btn2 {
     background-color: black; /* Couleur de fond du bouton */
     color: white; /* Couleur du texte du bouton */
@@ -242,6 +348,94 @@ justify-content: center;
     
 }
 
+/* Stylisation du conteneur du loader */
+.loader {
+    color: rgb(124, 124, 124); /* Couleur du texte */
+    font-family: "Poppins", sans-serif; /* Famille de polices */
+    font-weight: 500; /* Poids de la police */
+    font-size: 25px; /* Taille de la police */
+    -webkit-box-sizing: content-box; /* Box-sizing pour les navigateurs WebKit */
+    box-sizing: content-box; /* Box-sizing */
+    height: 40px; /* Hauteur du loader */
+    padding: 10px 10px; /* Padding à l'intérieur du loader */
+    display: -webkit-box; /* Affichage en tant que boîte pour les navigateurs WebKit */
+    display: -ms-flexbox; /* Affichage en tant que flexbox pour IE */
+    display: flex; /* Affichage en tant que flexbox */
+    border-radius: 8px; /* Coins arrondis */
+}
+  
+/* Stylisation du conteneur des mots */
+.words {
+    overflow: hidden; /* Masquer le contenu débordant */
+    position: relative; /* Position relative pour le pseudo-élément */
+}
+
+/* Pseudo-élément pour l'effet de dégradé */
+.words::after {
+    content: ""; /* Contenu vide */
+    position: absolute; /* Positionnement absolu */
+    inset: 0; /* Insertion complète */
+    background: linear-gradient(
+      var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%
+    ); /* Fond en dégradé */
+    z-index: 20; /* Ordre d'empilement */
+}
+  
+/* Stylisation des mots individuels */
+.word {
+    display: block; /* Affichage en bloc */
+    height: 100%; /* Hauteur complète */
+    padding-left: 6px; /* Padding à gauche */
+    color: #669bbc; /* Couleur du texte */
+    animation: spin_4991 4s infinite; /* Animation */
+}
+  
+/* Keyframes pour l'animation des mots */
+@keyframes spin_4991 {
+    10% {
+      -webkit-transform: translateY(-102%); /* Translation pour les navigateurs WebKit */
+      transform: translateY(-102%); /* Translation */
+    }
+  
+    25% {
+      -webkit-transform: translateY(-100%); /* Translation pour les navigateurs WebKit */
+      transform: translateY(-100%); /* Translation */
+    }
+  
+    35% {
+      -webkit-transform: translateY(-202%); /* Translation pour les navigateurs WebKit */
+      transform: translateY(-202%); /* Translation */
+    }
+  
+    50% {
+      -webkit-transform: translateY(-200%); /* Translation pour les navigateurs WebKit */
+      transform: translateY(-200%); /* Translation */
+    }
+  
+    60% {
+      -webkit-transform: translateY(-302%); /* Translation pour les navigateurs WebKit */
+      transform: translateY(-302%); /* Translation */
+    }
+  
+    75% {
+      -webkit-transform: translateY(-300%); /* Translation pour les navigateurs WebKit */
+      transform: translateY(-300%); /* Translation */
+    }
+  
+    85% {
+      -webkit-transform: translateY(-402%); /* Translation pour les navigateurs WebKit */
+      transform: translateY(-402%); /* Translation */
+    }
+  
+    100% {
+      -webkit-transform: translateY(-400%); /* Translation pour les navigateurs WebKit */
+      transform: translateY(-400%); /* Translation */
+    }
+}
+  
 
 /* Stylisation des cartes d'images */
 .images-formation {
@@ -562,3 +756,4 @@ justify-content: center;
         z-index: 1; /* Place le texte au-dessus des autres éléments */
     }
 }
+

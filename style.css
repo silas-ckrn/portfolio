@@ -774,6 +774,207 @@ button:hover .button-text {
 #main5:has(#jaune10:hover) {
     background-color:#ffd400; /* Mets la même couleur que le conteneur */
 }
+#rouge1 { background: #e01e37; }
+#main5:has(#rouge1:hover) {
+    background-color: #e01e37; /* Mets la même couleur que le conteneur */
+}
+#rouge2 { background: #da1e37; }
+#main5:has(#rouge2:hover) {
+    background-color: #da1e37; /* Mets la même couleur que le conteneur */
+}
+#rouge3 { background: #c71f37; }
+#main5:has(#rouge3:hover) {
+    background-color: #c71f37; /* Mets la même couleur que le conteneur */
+}
+#rouge4 { background: #bd1f36; }
+#main5:has(#rouge4:hover) {
+    background-color: #bd1f36; /* Mets la même couleur que le conteneur */
+}
+#rouge5 { background: #b21e35; }
+#main5:has(#rouge5:hover) {
+    background-color: #b21e35; /* Mets la même couleur que le conteneur */
+}
+#rouge6 { background: #a71e34; }
+#main5:has(#rouge6:hover) {
+    background-color: #a71e34; /* Mets la même couleur que le conteneur */
+}
+#rouge7 { background: #a11d33; }
+#main5:has(#rouge7:hover) {
+    background-color: #a11d33; /* Mets la même couleur que le conteneur */
+}
+#rouge8 { background: #85182a; }
+#main5:has(#rouge8:hover) {
+    background-color: #85182a; /* Mets la même couleur que le conteneur */
+}
+#rouge9 { background: #6e1423; }
+#main5:has(#rouge9:hover) {
+    background-color: #6e1423; /* Mets la même couleur que le conteneur */
+}
+#rouge10 { background: #641220; }
+#main5:has(#rouge10:hover) {
+    background-color: #641220; /* Mets la même couleur que le conteneur */
+}
+#turquoise1 { background: #99e2b4; }
+#main5:has(#turquoise1:hover) {
+    background-color: #99e2b4; /* Mets la même couleur que le conteneur */
+}
+#turquoise2 { background: #88d4ab; }
+#main5:has(#turquoise2:hover) {
+    background-color: #88d4ab; /* Mets la même couleur que le conteneur */
+}
+#turquoise3 { background: #78c6a3; }
+#main5:has(#turquoise3:hover) {
+    background-color: #78c6a3; /* Mets la même couleur que le conteneur */
+}
+#turquoise4 { background: #67b99a; }
+#main5:has(#turquoise4:hover) {
+    background-color: #67b99a; /* Mets la même couleur que le conteneur */
+}
+#turquoise5 { background: #56ab91; }
+#main5:has(#turquoise5:hover) {
+    background-color: #56ab91; /* Mets la même couleur que le conteneur */
+}
+#turquoise6 { background: #469d89; }
+#main5:has(#turquoise6:hover) {
+    background-color: #469d89; /* Mets la même couleur que le conteneur */
+}
+#turquoise7 { background: #358f80; }
+#main5:has(#turquoise7:hover) {
+    background-color: #358f80; /* Mets la même couleur que le conteneur */
+}
+#turquoise8 { background: #248277; }
+#main5:has(#turquoise8:hover) {
+    background-color: #248277; /* Mets la même couleur que le conteneur */
+}
+#turquoise9 { background: #14746f; }
+#main5:has(#turquoise9:hover) {
+    background-color: #14746f; /* Mets la même couleur que le conteneur */
+}
+#turquoise10 { background: #036666; }
+#main5:has(#turquoise10:hover) {
+    background-color: #036666; /* Mets la même couleur que le conteneur */
+}
+#amazigh1 { background: #184e77; }
+#main5:has(#amazigh1:hover) {
+    background-color: #184e77; /* Mets la même couleur que le conteneur */
+}
+#amazigh2 { background: #1e6091; }
+#main5:has(#amazigh2:hover) {
+    background-color: #1e6091; /* Mets la même couleur que le conteneur */
+}
+#amazigh3 { background: #1a759f; }
+#main5:has(#amazigh3:hover) {
+    background-color: #1a759f; /* Mets la même couleur que le conteneur */
+}
+#amazigh4 { background: #168aad; }
+#main5:has(#amazigh4:hover) {
+    background-color: #168aad; /* Mets la même couleur que le conteneur */
+}
+#amazigh5 { background: #34a0a4; }
+#main5:has(#amazigh5:hover) {
+    background-color: #34a0a4; /* Mets la même couleur que le conteneur */
+}
+#amazigh6 { background: #52b69a; }
+#main5:has(#amazigh6:hover) {
+    background-color: #52b69a; /* Mets la même couleur que le conteneur */
+}
+#amazigh7 { background: #76c893; }
+#main5:has(#amazigh7:hover) {
+    background-color: #76c893; /* Mets la même couleur que le conteneur */
+}
+#amazigh8 { background: #99d98c; }
+#main5:has(#amazigh8:hover) {
+    background-color: #99d98c; /* Mets la même couleur que le conteneur */
+}
+#amazigh9 { background: #b5e48c; }
+#main5:has(#amazigh9:hover) {
+    background-color: #b5e48c; /* Mets la même couleur que le conteneur */
+}
+#amazigh10 { background: #d9ed92; }
+#main5:has(#amazigh10:hover) {
+    background-color: #d9ed92; /* Mets la même couleur que le conteneur */
+}
+#mauve1 { background: #edf2fb; }
+#main5:has(#mauve1:hover) {
+    background-color: #edf2fb; /* Mets la même couleur que le conteneur */
+}
+#mauve2 { background: #e2eafc; }
+#main5:has(#mauve2:hover) {
+    background-color: #e2eafc; /* Mets la même couleur que le conteneur */
+}
+#mauve3 { background: #d7e3fc; }
+#main5:has(#mauve3:hover) {
+    background-color: #d7e3fc; /* Mets la même couleur que le conteneur */
+}
+#mauve4 { background: #ccdbfd; }
+#main5:has(#mauve4:hover) {
+    background-color: #ccdbfd; /* Mets la même couleur que le conteneur */
+}
+#mauve5 { background: #c1d3fe; }
+#main5:has(#mauve5:hover) {
+    background-color: #c1d3fe; /* Mets la même couleur que le conteneur */
+}
+#mauve6 { background: #b6ccfe; }
+#main5:has(#mauve6:hover) {
+    background-color: #b6ccfe; /* Mets la même couleur que le conteneur */
+}
+#mauve7 { background: #abc4ff; }
+#main5:has(#mauve7:hover) {
+    background-color: #abc4ff; /* Mets la même couleur que le conteneur */
+}
+#mauve8 { background: #a3bcff; }
+#main5:has(#mauve8:hover) {
+    background-color: #a3bcff; /* Mets la même couleur que le conteneur */
+}
+#mauve9 { background: #98b4ff; }
+#main5:has(#mauve9:hover) {
+    background-color: #98b4ff; /* Mets la même couleur que le conteneur */
+}
+#mauve10 { background: #8cafff; }
+#main5:has(#mauve10:hover) {
+    background-color: #8cafff; /* Mets la même couleur que le conteneur */
+}
+#amidadi1 { background: #a9d6e5; }
+#main5:has(#amidadi1:hover) {
+    background-color: #a9d6e5; /* Mets la même couleur que le conteneur */
+}
+#amidadi2 { background: #89c2d9; }
+#main5:has(#amidadi2:hover) {
+    background-color: #89c2d9; /* Mets la même couleur que le conteneur */
+}
+#amidadi3 { background: #61a5c2; }
+#main5:has(#amidadi3:hover) {
+    background-color: #61a5c2; /* Mets la même couleur que le conteneur */
+}
+#amidadi4 { background: #468faf; }
+#main5:has(#amidadi4:hover) {
+    background-color: #468faf; /* Mets la même couleur que le conteneur */
+}
+#amidadi5 { background: #2c7da0; }
+#main5:has(#amidadi5:hover) {
+    background-color: #2c7da0; /* Mets la même couleur que le conteneur */
+}
+#amidadi6 { background: #2a6f97; }
+#main5:has(#amidadi6:hover) {
+    background-color: #2a6f97; /* Mets la même couleur que le conteneur */
+}
+#amidadi7 { background: #014f86; }
+#main5:has(#amidadi7:hover) {
+    background-color: #014f86; /* Mets la même couleur que le conteneur */
+}
+#amidadi8 { background: #01497c; }
+#main5:has(#amidadi8:hover) {
+    background-color: #01497c; /* Mets la même couleur que le conteneur */
+}
+#amidadi9 { background: #013a63; }
+#main5:has(#amidadi9:hover) {
+    background-color: #013a63; /* Mets la même couleur que le conteneur */
+}
+#amidadi10 { background: #012a4a; }
+#main5:has(#amidadi10:hover) {
+    background-color: #012a4a; /* Mets la même couleur que le conteneur */
+}
+
 
 /* Bordure */
 .border {

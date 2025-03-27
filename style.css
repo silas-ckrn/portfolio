@@ -516,6 +516,66 @@ button:hover .button-text {
     text-align: left; /* Aligne le texte à gauche */
 }
 
+/* Stylisation de la carte 4 */
+.images-projet {
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    flex-direction: row; /* Affiche les cartes en ligne */
+    justify-content: center; /* Centre les cartes horizontalement */
+    align-items: center; /* Centre les cartes verticalement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    width: 100%; /* Prend toute la largeur de la fenêtre */
+    gap: 40px; /* Ajoute un espace de 20px entre les cartes */
+}
+
+.card4 {
+    width: 400px; /* Largeur de la carte */
+    height: 250px; /* Hauteur de la carte */
+    perspective: 1000px; /* Crée une perspective 3D pour l'effet de rotation */
+    margin-right: 60px; /* Ajoute un espacement entre les cartes */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Permet de voir les faces avant et arrière */
+    transition: transform 0.6s; /* Transition fluide pour la rotation */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre seulement sur la carte */
+    transition: transform 0.6s, box-shadow 0.3s ease-in-out; /* Anime aussi l'ombre */
+}
+
+/* Augmente l’ombre au survol pour un effet dynamique */
+.card4:hover .card-inner {
+    transform: rotateY(180deg); /* Tourne l’ensemble de la carte (recto/verso) */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Augmente l'ombre */
+}
+
+.card-front,
+.card-back {
+    position: absolute; /* Positionnement absolu pour les deux faces de la carte */
+    top: 0; /* Aligne le haut de la carte */
+    left: 0; /* Aligne le côté gauche de la carte */
+    width: 100%; /* Prend toute la largeur du conteneur */
+    height: 100%; /* Prend toute la hauteur du conteneur */
+    backface-visibility: hidden; /* Cache le verso lors du retour de la carte */
+}
+
+.card-front img {
+    width: 100%; /* L'image prend toute la largeur de la face avant */
+    height: 100%; /* L'image prend toute la hauteur de la face avant */
+    object-fit: cover; /* L'image couvre entièrement la face avant sans déformation */
+}
+
+.card-back {
+    transform: rotateY(180deg); /* Retourne le verso de la carte pour qu'il soit caché au départ */
+}
+
+.paragraphe2 {
+    color: black; /* Couleur du texte */
+    font-size: 1.5em; /* Taille de la police */
+    text-align: right; /* Alignement du texte à gauche */
+    padding: 20px; /* Ajoute un espacement intérieur autour du texte */
+    width: 50%; /* Occupe 50% de l'écran pour équilibrer */
+}
 
 
 /* Stylisation de la section 3 */
@@ -569,11 +629,13 @@ button:hover .button-text {
     scroll-snap-type: x mandatory; /* Active le défilement par saccades */
     width: 80%; /* Définit la largeur du conteneur */
     max-width: 100%; /* Empêche le conteneur de dépasser la largeur de l'écran */
+    padding-bottom: 60px; /* Ajoute un espacement en bas pour éviter que les cartes ne se touchent */
  }
 
 .organiserplt > div { /* Supposons que chaque carte soit un div à l'intérieur du conteneur */
     margin-right: 10px; /* Espace entre les cartes */
     flex-shrink: 0; /* Empêche les cartes de rétrécir */
+   
 }
 
 
@@ -1041,6 +1103,7 @@ button:hover .button-text {
     font-weight: 600;
     margin-bottom: 50px;
 }
+
 /* Stylisation des icônes sociaux */
 .social-icons a {
     color: white; /* Couleur des icônes */
@@ -1080,8 +1143,76 @@ button:hover .button-text {
     color: #669bbc;
 }
 
+.qqim {
+    z-index: 1;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row-reverse ;
+}
+
+/* Cache l'input checkbox pour qu'il ne soit pas visible */
+#checkbox-input {
+    display: none;
+}
+
+/* Style de l'ampoule (bouton switch) */
+.switch {
+    padding: 10px;
+    background-color: rgb(46, 46, 46); /* Couleur de base du bouton */
+    border-radius: 50px; /* Forme arrondie */
+    z-index: 1;
+    cursor: pointer; /* Curseur interactif */
+    display: flex;
+    transition: background-color 0.7s, box-shadow 0.7s; /* Effet de transition en douceur */
+}
+
+/* Changement de couleur et ajout d'un halo lumineux lorsque l'ampoule est activée */
+#checkbox-input:checked + .switch {
+    background-color: rgb(161, 91, 0); /* Changement de couleur */
+    box-shadow: 0px 0px 100px rgb(255, 196, 0); /* Effet de lumière */
+}
+
+/* Conteneur du texte qui apparaît à gauche de la lampe */
+.quote {
+    background-color: rgb(46, 46, 46); /* Fond identique au switch pour cohérence visuelle */
+    flex-direction: column; /* Empile les éléments en colonne */
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.7s ease-in-out; /* Transition fluide pour l'apparition */
+    right: 100px; /* Positionnement horizontal */
+    top: 100px; /* Positionnement vertical */
+    height: 65px; /* Hauteur du conteneur */
+    width: 280px; /* Largeur du conteneur */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    display: flex; /* Active flexbox pour l'alignement */
+}
+
+/* Style du premier texte */
+.quote1 {
+    font-size: 16px;
+    font-weight: bold; /* Texte en gras */
+    color: white; /* Couleur blanche */
+}
+
+/* Style du deuxième texte */
+.quote2 {
+    font-size: 16px;
+    color: white; /* Couleur blanche */
+}
+
+/* Rend le texte visible lorsque l'ampoule est activée */
+#checkbox-input:checked ~ .quote {
+    opacity: 1; /* Affiche le texte avec transition */
+}
+
+
+   
 /* Media queries pour les écrans de taille moyenne (tablettes) */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     header {
         flex-direction: row; /* Dispose les éléments de l'en-tête en colonne */
         height: auto; /* Définit une hauteur automatique */
@@ -1170,8 +1301,22 @@ button:hover .button-text {
     .images-logiciels-wrapper {
         animation-duration: 10s; /* Raccourcit la durée pour éviter les lags */
     }
+    .images-projet {
+        justify-content: center; /* Centre la carte horizontalement */
+        align-items: center; /* Centre la carte verticalement */
+        flex-direction: column; /* Dispose les éléments en colonne */
+    }
+    .card4 {
+        margin-right: 0; /* Supprime l'espacement entre les cartes */
+    }
+    .paragraphe2 {
+        width: 100%; /* Prend toute la largeur de l'écran */
+        font-size: 1em; /* Réduit la taille de la police */
+        text-align: center; /* Centre le texte pour une meilleure lisibilité */
+        padding: 15px; /* Réduit le padding pour éviter trop d'espace */
+    }
+  
 
     
    
 }
-

@@ -24,7 +24,10 @@ section {
 }
 
 footer {
-    flex-shrink: 0;
+    background-image: url('images/azulagrakal.png');
+    background-size: cover; /* Ajuste l'image pour couvrir tout le footer */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
 * {
     font-family: 'Poppins', sans-serif; /* Applique la police 'Inter' à tout le contenu */

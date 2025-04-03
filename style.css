@@ -1319,7 +1319,9 @@ button:hover .button-text {
         padding: 15px; /* Réduit le padding pour éviter trop d'espace */
     }
   
-
+  .contact-info p {
+        font-size: 1em;
+    }
     
    
 }
@@ -1336,8 +1338,6 @@ button:hover .button-text {
          width: 260px; /* Largeur du conteneur */
         
     }
-    .contact-info p {
-        font-size: 1em;
-    }
+  
    
 }

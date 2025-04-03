@@ -1323,3 +1323,21 @@ button:hover .button-text {
     
    
 }
+@media (max-width: 414px) {
+    .card2 {
+        width: 250px; /* Largeur minimale des cartes */
+        height: 350px; /* Hauteur des cartes */  
+    }
+    .card4 {
+        width: 350px; /* Largeur minimale des cartes */
+        height:220px;  /* Hauteur des cartes */  
+    }
+    .quote {
+         width: 260px; /* Largeur du conteneur */
+        
+    }
+    .contact-info p {
+        font-size: 1em;
+    }
+   
+}

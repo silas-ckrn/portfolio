@@ -156,6 +156,8 @@ min-height: 10vh;  }
 flex-direction: column;
 align-items: center;
 justify-content: center;
+display: flex;  
+gap: 80px; /* Espace entre les éléments */
 }
 #main6 { background: #e9ecef;
     flex-direction: column;
@@ -527,7 +529,7 @@ button:hover .button-text {
     align-items: center; /* Centre les cartes verticalement */
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
     width: 100%; /* Prend toute la largeur de la fenêtre */
-    gap: 40px; /* Ajoute un espace de 20px entre les cartes */
+    gap: 40px; /* Ajoute un espace de 40px entre les cartes */
 }
 
 .card4 {
@@ -580,6 +582,115 @@ button:hover .button-text {
     width: 50%; /* Occupe 50% de l'écran pour équilibrer */
 }
 
+/* Stylisation des cartes de ce que je fais */
+.cequejefais {
+    display: flex; /* Affiche les images en ligne */
+    flex-direction: row; /* Superpose les cartes horizontalement */
+    flex-wrap: nowrap; /* Empêche le retour à la ligne des éléments */
+    margin: auto; /* Centre le conteneur horizontalement */
+    overflow: hidden; /* Cache le contenu qui dépasse du conteneur */
+    overflow-x: auto; /* Ajoute une barre de défilement horizontale */
+    scroll-snap-type: x mandatory; /* Active le défilement par saccades */
+    
+    max-width: 100%; /* Empêche le conteneur de dépasser la largeur de l'écran */
+   
+}
+
+
+.card5 {
+    overflow: hidden;             /* Masque tout ce qui dépasse de la carte */
+    cursor: pointer;              /* Curseur main au survol */
+    display: flex;                /* Utilise Flexbox pour l’alignement */
+    flex-direction: column;       /* Empile les éléments verticalement */
+    position: relative;           /* Utile si on veut placer du texte en absolu plus tard */
+    width: 350px;                 /* Largeur fixe de chaque carte */
+    height: 350px;                /* Hauteur fixe de chaque carte */
+    padding: 40px;                /* Un peu d’espace intérieur pour respirer */
+    box-sizing: border-box;       /* Inclut le padding dans la taille */
+}
+
+.card5 img {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Positionne l'image à droite */
+    width: 50px;
+    height: 50px; 
+
+}
+
+#card5-1{
+    background-color: #6c757d; /* Couleur de fond pour les cartes */
+}
+#card5-2{
+    background-color: #495057; /* Couleur de fond pour les cartes */
+}
+#card5-3{
+    background-color: #343a40; /* Couleur de fond pour les cartes */
+}
+
+/* Style pour le titre dans chaque carte */
+.card-title {
+    font-weight: 700;       /* Texte plus épais */
+    font-size: 1.2rem;      /* Taille légèrement plus grande */
+    padding-top: 30px; /* Espace entre le haut de la carte et le titre */
+    margin-bottom: 20px;    /* Espace entre le titre et le 1er paragraphe */
+    color: white;           /* Couleur blanche pour bien ressortir sur les fonds sombres */
+    text-align: left;       /* Aligne le texte à gauche*/
+    width: 100%; /* Pour que ça prenne toute la largeur dispo */
+}
+
+/* Style pour chaque phrase de description */
+.card-text {
+    margin: 5px 0;          /* Un petit espace vertical entre les phrases */
+    font-size: 0.8rem;     /* Taille un peu réduite pour l'harmonie */
+    color: white;           /* Texte blanc pour contraste */
+}
+.card-text:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.062);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+/* Stylisation du bouton d'appel à l'action */
+.cta {
+    position: absolute;      /* Positionnement absolu dans son conteneur */
+    bottom: 30px;               /* Aligné en bas */
+    left: 20px;                /* Aligné à gauche */
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+  
+
+  .cta span {
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: white;;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+ 
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+ 
+  
 
 /* Stylisation de la section 3 */
 
@@ -596,8 +707,7 @@ button:hover .button-text {
     overflow-x: auto; /* Ajoute une barre de défilement horizontale */
     scroll-snap-type: x mandatory; /* Active le défilement par saccades */
     white-space: nowrap; /* Empêche le retour à la ligne des éléments */
-    padding-top:20px ;
-    padding-bottom: 80px;
+   
 }
 
 /* Stylisation des cartes de design */
@@ -632,7 +742,6 @@ button:hover .button-text {
     scroll-snap-type: x mandatory; /* Active le défilement par saccades */
     width: 80%; /* Définit la largeur du conteneur */
     max-width: 100%; /* Empêche le conteneur de dépasser la largeur de l'écran */
-    padding-bottom: 60px; /* Ajoute un espacement en bas pour éviter que les cartes ne se touchent */
  }
 
 .organiserplt > div { /* Supposons que chaque carte soit un div à l'intérieur du conteneur */
@@ -1323,6 +1432,9 @@ button:hover .button-text {
         font-size: 1em;
     }
     
+    .cequejefais {
+        flex-direction: column; /* Dispose les images en colonne */
+    }
    
 }
 @media (max-width: 414px) {
@@ -1338,6 +1450,5 @@ button:hover .button-text {
          width: 260px; /* Largeur du conteneur */
         
     }
-  
    
 }

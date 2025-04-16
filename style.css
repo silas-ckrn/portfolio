@@ -1434,6 +1434,7 @@ button:hover .button-text {
     
     .cequejefais {
         flex-direction: column; /* Dispose les images en colonne */
+        gap: 30px; /* Ajoute un espacement entre les élements */
     }
    
 }

@@ -168,6 +168,10 @@ gap: 80px; /* Espace entre les éléments */
         flex-direction: column;
         align-items: center;
         justify-content: center;}
+ #main8 { background: #e9ecef;
+ flex-direction: column;
+ align-items: center;
+justify-content: center;}
 
 /* Stylisation du contenu principal */
 .contenu1 {
@@ -512,6 +516,7 @@ button:hover .button-text {
     object-fit: cover; /* Couvre toute la carte sans déformation */
     border-top-left-radius: 10px; /* Coins arrondis pour l'image en haut à gauche */
     border-top-right-radius: 10px; /* Coins arrondis pour l'image en haut à droite */
+    object-position: center top; /* Centre l'image en haut */
     
 }
 
